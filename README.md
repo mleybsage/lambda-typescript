@@ -1,0 +1,1 @@
+Example of a simple Lambda function written in Typescript, packaged through Parcel

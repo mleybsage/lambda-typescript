@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "parcel": "^1.12.3",
+    "parcel-plugin-zip": "^1.0.6",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "build": "yarn parcel build handler.ts --target=node --global handler -o index.js --bundle-node-modules --no-source-maps",
+    "deploy:aws": "aws lambda update-function-code --function-name lambda-typescript --zip-file fileb://./dist.zip",
+    "deploy": "yarn build; yarn deploy:aws"
+  }
+}
